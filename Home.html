@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<style>
+  /* Navigation bar styles */
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex; /* Stretch across full width */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+  }
+
+  .navbar-nav li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  /* Button styles */
+  .navbar-nav li a {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <span class="navbar-brand">Moahub</span>
+      <ul class="navbar-nav">
+        <li><a href="#" onclick="progn()">Projects</a></li>
+        <li><a href="#" onclick="about()">About</a></li>
+        <li><a href="#" onclick="dev()">Dev</a></li>
+        <li><a href="#" onclick="server()">Web Servers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a>Welcome To Moahub!<br>This Is Where I Will Put All My Projects And Stuff Like That.</a>
+  
+  <footer>
+    <h2>Useful Links</h2>
+    <div><a href="https://github.com/Monnorthegodlydev/Moahub-Website">Website Github Repo</a></div>
+    <div><a href="https://github.com/palermostest25/ConnorAndDenby/tree/main/Connor">Project Github Repo</a></div>
+  </footer>
+  <script>
+    function progn() {
+      window.location.href = "https://moahub.org?page=Projects";
+    }
+
+    function about() {
+      window.location.href = "https://moahub.org?page=About";
+    }
+
+    function dev() {
+      window.location.href = "https://moahub.org?page=devpage";
+    }
+
+    function server() {
+      window.location.href = "https://moahub.org?page=Web Servers";
+    }
+  </script>
+</body>
+</html>

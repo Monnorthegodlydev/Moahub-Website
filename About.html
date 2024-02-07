@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<style>
+  /* Navigation bar styles */
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex; /* Stretch across full width */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+  }
+
+  .navbar-nav li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  /* Button styles */
+  .navbar-nav li a {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <span class="navbar-brand">About Moahub</span>
+      <ul class="navbar-nav">
+        <li><a href="#" onclick="progn()">Projects</a></li>
+        <li><a href="#" onclick="nondev()">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>About</h1>
+
+  <a>License</a>
+  <p>Please View License <a href="https://github.com/Monnorthegodlydev/Moahub-Website/blob/main/LICENSE.md">Here</a></p>
+
+  <footer>
+  <h2>About The Servers That Moahub Run</h2>
+  <p>Please Note That I Dont Own Any Of These Services or Own Any Sort Of Rights To Them</p>
+  <a>tomcat.moahub.org:</a>
+
+    <p>The website is powered by Tomcat and Guacamole.
+    Tomcat is an open-source web server and servlet container. 
+    Guacamole is an open-source remote desktop gateway.
+    Tomcat and Guacamole are licensed under the Apache License 2.0. 
+    For more information about Tomcat and Guacamole, and their licensing, please visit The offical Apache Website.</p>
+
+  <a>proxmox.moahub.org:</a>
+
+      <p>Proxmox is an open-source virtualization platform.
+      Proxmox is licensed under the GNU Affero General Public License.
+      For more information about Proxmox and its licensing, please visit the official Proxmox website.</p>
+    <a>phoneinfoga.moahub.org</a>
+      <p>PhoneInfoga is an open-source tool designed to gather information about phone numbers.
+        Using PhoneInfoga to collect information about someone without their permission might be against the law in some places. It's really important to understand and follow the rules before using this tool.
+        PhoneInfoga is provided under the GNU General Public License (GPL) v3.0, which means it's free to use, change, and share, but you also have to share any changes you make to it.
+        You can find the official PhoneInfoga website and instructions at https://sundowndev.github.io/phoneinfoga/.</p>
+  <a>ntfy.moahub.org</a>
+    <p>ntfy is an open-source and self-hosted push notification server.
+    It lets you send notifications to various devices and platforms, including smartphones, desktops, and browsers. 
+    You can use it for personal projects or integrate it into applications for sending alerts, reminders, or any other kind of real-time updates.
+    ntfy is licensed under the MIT License, which is a permissive open-source license.
+    This means you can use, modify, and distribute ntfy for free, for both commercial and non-commercial purposes.
+    You are responsible for complying with any applicable laws and regulations related to your use of ntfy.
+    Website: https://github.com/binwiederhier/ntfy
+    Documentation: https://ntfy.sh/docs
+    Community forum: https://ntfy.sh/docs
+    ntfy requires some technical knowledge to set up and use.
+    You will need to host ntfy on your own server or cloud platform.</p>
+  <a>uptimekuma.moahub.org</a>
+    <p>Uptime Kuma is an open-source monitoring tool you can host yourself to keep track of the availability of websites, APIs, and other online services.
+      It checks their status at regular intervals and alerts you if they go down.
+      Uptime Kuma is licensed under the MIT License, which means you're free to use, modify, and distribute it for any purpose, even commercial.
+      Website: https://uptime.kuma.pet/
+      GitHub Repository: https://github.com/louislam/uptime-kuma-website
+      Documentation: https://uptime.kuma.pet/
+      For additional details on legal aspects, consult the MIT License text available on the Uptime Kuma website or GitHub repository.</p>
+  </footer>
+  <script>
+    function progn() {
+      window.location.href = "https://moahub.org?page=Projects";
+    }
+
+    function nondev() {
+      window.location.href = "https://moahub.org?page=Home";
+    }
+  </script>
+</body>
+</html>

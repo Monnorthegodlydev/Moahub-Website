@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Servers</title>
+<style>
+  /* Navigation bar styles */
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex; /* Stretch across full width */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+  }
+
+  .navbar-nav li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  /* Button styles */
+  .navbar-nav li a {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <span class="navbar-brand">Moahub</span>
+      <ul class="navbar-nav">
+        <li><a href="#" onclick="home()">Home</a></li>
+        <li><a href="#" onclick="about()">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div><a href="#" onclick="prxmx()">Proxmox</a></div>
+  <div><a href="#" onclick="guac()">Apache Guacamole</a></div>
+  <div><a href="#" onclick="upku()">Uptime Kuma</a></div>
+  <div><a href="#" onclick="phin()">Phone Infoga</a></div>
+
+  <script>
+    function home() {
+      window.location.href = "https://moahub.org?page=Home";
+    }
+
+    function prxmx() {
+      window.location.href = "https://proxmox.moahub.org";
+    }
+
+    function guac() {
+      window.location.href = "https://tomcat.moahub.org/guacamole";
+    }
+
+    function upku() {
+      window.location.href = "https://uptimekuma.moahub.org";
+    }
+
+    function phin() {
+      window.location.href = "https://phoneinfoga.moahub.org";
+    }
+
+    function about() {
+      window.location.href = "https://moahub.org?page=About";
+    }
+  </script>
+</body>
+</html>
