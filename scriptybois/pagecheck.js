@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the page parameter from the URL
+    // Get the page parameter from the URL or set default to 'Home'
     const urlParams = new URLSearchParams(window.location.search);
-    const page = urlParams.get("page");
+    const page = urlParams.get("page") || "Home";
 
     // Define a function to load content based on the page parameter
     function loadContent(page) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(`../${page}.html`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`404. ${page} Page Dose Not Exist!`);
+                    throw new Error(`Failed to fetch ../${page}.html`);
                 }
                 return response.text();
             })
@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => {
                 // Handle errors (e.g., page not found)
-                contentElement.innerHTML = `<p>${error.message}</p>`;
+                contentElement.innerHTML = `<h1>Error Loading Page</h1><p>${error.message}</p>`;
             });
     }
 
-    // Load content based on the page parameter
+    // Load content based on the page parameter or default to 'Home'
     loadContent(page);
 });
