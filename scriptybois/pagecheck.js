@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(`../${page}.html`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch ../${page}.html`);
+                    throw new Error(`Failed to fetch ../${page}.html. Status: ${response.status}`);
                 }
                 return response.text();
             })
