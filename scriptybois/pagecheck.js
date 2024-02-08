@@ -7,11 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadContent(page) {
         const contentElement = document.getElementById("content");
 
+        // Check if the page parameter is 'error'
+        if (page === "error") {
+            // Redirect to a different page
+            window.location.href = "https://www.moahub.org";
+            return; // Stop further execution
+        }
+
         // Fetch the HTML content of the specified page from the parent directory
         fetch(`../${page}.html`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch ../${page}.html. Status: ${response.status}`);
+                    throw new Error(`Failed to fetch ${page}. Status: ${response.status}`);
                 }
                 return response.text();
             })
@@ -25,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Load content based on the page parameter or default to 'Home'
+    // Load content based on the page parameter or redirect if 'error'
     loadContent(page);
 });
