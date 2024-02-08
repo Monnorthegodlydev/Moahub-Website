@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Error</title>
+<script>
+    // Get the query parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    // Check if the query parameter matches the expected value
+    if (error === '406') {
+        // Show the content if the query matches
+        document.getElementById('http_406').style.display = 'block';
+    }
+</script>
+
+<div id="http_406">
+    <h2>406</h2>
+    <p>Not Acceptable</p>
+</div>
+</html>
