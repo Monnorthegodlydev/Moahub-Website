@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => {
                 // Handle errors (e.g., page not found)
-                contentElement.innerHTML = `<h1>Error Loading Page</h1><p>${error.message}</p>`;
+                contentElement.innerHTML = `<h1>Moahub</h1>`;
+                console.error(error.message)
             });
     }
 
