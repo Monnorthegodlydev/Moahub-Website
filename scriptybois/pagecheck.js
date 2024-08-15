@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "https://www.moahub.org";
             return; // Stop further execution
         }
+        if (page == "weather") {
+            window.location.href = "https://www.moahub.org/weather.html";
+            return;
+        }
 
         // Fetch the HTML content of the specified page from the parent directory
         fetch(`../${page}.html`)
